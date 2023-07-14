@@ -1,27 +1,29 @@
-const routes = (handler) => [
+const routes = (notesHandler) => [
     {
         method: 'POST',
         path: '/notes',
-        handler: handler.postNoteHandler,
+        handler: notesHandler.postNoteHandler,
     },
     {
         method: 'GET',
         path: '/notes',
-        handler: handler.getNotesHandler,
+        handler: notesHandler.getNotesHandler,
     },
     {
         method: 'GET',
         path: '/notes/{id}',
-        handler: handler.getNoteByIdHandler,
+        handler: notesHandler.getNoteByIdHandler,
     },
     {
         method: 'PUT',
         path: '/notes/{id}',
-        handler: handler.putNoteByIdHandler,
+        handler: notesHandler.putNoteByIdHandler,
     },
     {
         method: 'DELETE',
         path: '/notes/{id}',
-        handler: handler.deleteNoteByIdHandler,
+        handler: notesHandler.deleteNoteByIdHandler,
     },
 ];
+
+module.exports = routes;
